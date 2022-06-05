@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MvvmTemplate.ViewModels;
 
 namespace MvvmTemplate.Views
 {
@@ -23,6 +24,8 @@ namespace MvvmTemplate.Views
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = App.Current.Services.GetService(typeof(MainWindowViewModel));
         }
     }
 }
